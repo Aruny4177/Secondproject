@@ -1,20 +1,23 @@
 package com.niit.test;
-
+import java.util.List;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-
 public class BlogDAOTest {
 
-	@BeforeClass
-	public static void intialize()
+
+	
+	AnnotationConfigApplicationContext context;
+	
+	public BlogDAOTest()
 	{
-		AnnotationConfigApplicationContext context=new AnnotationConfigApplicationContext();
+		context = new AnnotationConfigApplicationContext();
 		context.scan("com.niit");
-		context.refresh();
+		//context.refresh();
 	}
 	
-	@test
-	public void  test()
-	{
-		fail("Not yest implemented");
+		public static void main(String[] args)
+	{	
+			BlogDAOTest t = new BlogDAOTest();
+	     	
+	
 	}
 }
